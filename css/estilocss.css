@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css?family=Monoton');
+
+body{
+    background-image: url(../img/pizza1.jpeg);
+}
+#logo{
+     opacity:0.5;
+      width:50%;
+}
+.home{
+    margin:auto;
+    width:80%;
+    padding: 50px;
+    text-align: center;
+    background-image: url(../img/pizarra.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity:0.9;
+    color:white;
+    position: relative;
+
+}
+.registro{
+    margin:auto;
+    width:100%;
+    padding: 50px;
+    text-align: center;
+    background-color: rgb(227, 227, 233);
+    opacity:0.9;
+    color:white;
+    position: relative;
+}
+.contacto{
+    margin:auto;
+    width:100%;
+    padding: 50px;
+    text-align: center;
+    background-image: url(../img/pizarra.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity:0.9;
+    color:white;
+    position: relative;
+}
+#contenedor{
+    margin:auto;
+    width:50%;
+    text-align: center;
+    padding: 20px;
+    background-image: url(../img/pizarra.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity:0.9;
+    color:white;
+    position: relative;
+}
+
+.cajatexto{
+    padding: 10px;
+    margin-left: 20px;
+    border-bottom: none;
+}
+.resaltar{
+    font-family: 'Monoton', cursive;
+}
+
+h3{
+    font-style: italic;
+}
+h5{
+    font-style: italic;
+}
+.btn{
+    display: inline;
+    float:right;
+}
+img{
+    width:100px
+}
+
+
+@media (min-width: 576px) {
+    .home{      
+        width:100%;
+        padding: 70px;        
+    }
+    .contacto{   
+        width:100%;
+        padding: 70px;    
+}   
+}
+
+@media (min-width: 768px) {
+    .home{      
+        width:75%;
+        padding: 120px;        
+    }
+    .contacto{   
+        width:75%;
+        padding: 120px;    
+}   
+}

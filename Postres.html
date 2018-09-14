@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Restaurante italiano:Panna Cotta</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/estilocss.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
+
+  <script src="js/js.js"></script>
+  <script src="./js/gestorajax - postres.js"></script>
+  <script src="./js/plato.js"></script>
+  <script src="./js/jquery-3.3.1.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+  <script>
+    const URL = "https://fpaniaguaformacion.github.io/datos_proyecto_final.json";
+    function ejecutar() {
+      console.log("Ejecutando...");
+      cargar(URL);
+    }
+    var platos = new Array();
+    var total = 0;
+    function comprar(plato, precio) {
+      platos.push(plato + "" + precio + "€");
+      total = total + Number(precio);
+      console.log(platos);
+    }
+    function verCesta() {
+      platos.forEach(plato => {
+        console.log(plato);
+      });
+      console.log(total);
+      alert(total);
+    }
+  </script>
+</head>
+
+<body onload="ejecutar()">
+  <div class="alert alert-dark col-12" role="alert">
+    <img src="img/pannacotta.png">
+    <h1>Bienvenido a
+      <span class="resaltar">Panna cotta*</span>
+    </h1>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="Home.html">Inicio</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="Registrate.html">Registrate</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              Haz tu pedido
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="Entrantes.html">Entrantes</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="Pizzas.html">Pizzas</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="Postres.html">Postres</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item disabled" href="">
+                <i class="fas fa-cart-plus"></i>Ver tu Cesta</a>
+            </div>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="Conocenos.html">Conócenos</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="Contacto.html">Contacto</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="/angular.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              Nuestros Productos
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Entrantes</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Pizzas</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Postres</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <br>
+  <div class="container">
+    <div class="row">
+      <div id="contenedor" class="col-12 "></div>
+    </div>
+  </div>
+  <br>
+  <div class="container-fluid">
+    <div class="card">
+      <div class="card-header">
+        <h5>Ver tu cesta y el estado de tu pedido.</h5>
+        <button type="button" class="btn btn-danger" onclick="verCesta()">
+          <i class="fas fa-cart-plus"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="card">
+    <h5 class="card-header">DIRECCIÓN Y TELÉFONO</h5>
+    <div class="card-body">
+      <h5 class="card-title">Panna Cotta. Restaurante italianoCalle Cava Baja, 19, Madrid, España 28005 Madrid</h5>
+      <p class="card-text">E-mail: info@emmayjulia.com Teléfono: 913 66 10 23</p>
+      <button type="button" class="btn btn-lg btn-dark">Nuestras redes</button>
+    </div>
+    <div class="card-footer">
+      <p class="font-weight-bold">Comparte en las redes:</p>
+      <a href="https://es-es.facebook.com/" class="btn btn-primary">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a href="https://twitter.com/?lang=es" class="btn btn-outline-primary">
+        <i class="fab fa-twitter-square"></i>
+      </a>
+      <a href="https://web.whatsapp.com/" class="btn btn-info">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a href="https://www.youtube.com/" class="btn btn-danger">
+        <i class="fab fa-youtube"></i>
+      </a>
+      <a href="https://es.linkedin.com/" class="btn btn-primary">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </div>
+  </div>
+</body>
+
+</html>

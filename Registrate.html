@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Restaurante italiano:Panna Cotta</title>
+	<style>
+		.thumbnail {
+			width: 200px;
+			height: 200px;
+			border-radius: 200px
+		}
+	</style>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/estilocss.css">
+	<script src="js/js.js"></script>
+	<script src="./js/jquery-3.3.1.min.js"></script>
+	<script src="./js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+	 crossorigin="anonymous">
+	<script>
+		$(document).ready(function () {
+
+			$("#registro #nombre").keyup(function () {
+				var textorecogido = $(this).val();
+				$("h2").text(textorecogido);
+			})
+				.keyup();
+		});
+	</script>
+</head>
+
+<body>
+	<div class="alert alert-dark col-12" role="alert">
+		<img src="img/pannacotta.png">
+		<h1>Bienvenido a
+			<span class="resaltar">Panna cotta*</span>
+		</h1>
+		<h2></h2>
+		<h3>Nos alegramos de tu visita</h3>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="Home.html">Inicio</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+			 aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="Registrate.html">Regístrate</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="Pedido.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+						 aria-expanded="false">
+							Haz tu pedido
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="Entrantes.html">Entrantes</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="Pizzas.html">Pizzas</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="Postres.html">Postres</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item disabled" href="#">
+								<i class="fas fa-cart-plus"></i>Ver tu Cesta</a>
+						</div>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="Conocenos.html">Conócenos</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="Contacto.html">Contacto</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="/angular.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+						 aria-expanded="false">
+							Nuestros Productos
+						</a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<a class="dropdown-item" href="#">Entrantes</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#">Pizzas</a>
+							<div class="dropdown-divider"></div>
+							<a class="dropdown-item" href="#">Postres</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</div>
+	<br>
+	<div class="registro">
+		<div class="p-3 mb-2 bg-primary text-white">
+			REGISTRATE
+		<div class="p-3 mb-2 bg-primary text-white">
+				Aprovecha este mes un 50% de descuento para nuestros socios ¿Aún no eres miembro de
+				<span class="resaltar">Panna cotta*</span>? ¡Únete a nuestro club de amigos y descubre todas sus ventajas!
+		</div>
+		</div>
+	<div class="alert alert-dark" role="alert">
+		<form>
+			<input type="text" id="nombre" name="nombre" placeholder="Nombre*" class="cajatexto" required>
+				<br>
+				<br>
+			<input type="text" id="apellido" name="apellido" placeholder="Apellidos*" class="cajatexto" required>
+				<br>
+				<br>
+			<label for="date"> Año de nacimiento* </label>
+				<br>
+			<input type="number" id="date" name="date" value="" class="cajatexto" required>
+				<br>
+				<br>
+			<label for="qv">Género*:</label>
+				<br>
+			<input type="checkbox" id="qv1" checked>
+			<label for="qv">Hombre</label>
+			<input type="checkbox" id="qv2">
+			<label for="qv">Mujer</label>
+			<input type="checkbox" id="qv3">
+			<label for="qv">Otro</label>
+				<br>
+				<br>
+			<input type="email" id="email" placeholder="E-mail*" class="cajatexto" required>
+				<br>
+				<br>
+			<input type="password" id="contraseña" placeholder="Contraseña*" class="cajatexto" required>
+				<br>
+				<br>
+			<input type="number" id="movil" name="movil" placeholder="Móvil*" class="cajatexto" required>
+				<br>
+				<br>
+			<input id="boton" type="button" value="Aceptar" onclick="validar()">
+				<p>*Campos obligatorios.</p>
+		</div>
+		<a href="#">Términos legales y política de privacidad.</a>
+		</div>
+	</form>
+	</div>
+	<br>
+	<div class="row">
+		<div class="col-xs-3 col-md-3 col-lg-3 col-xl-3 alinear mb-2">
+			<img src="./img/promocion1.png" class="thumbnail">
+		</div>
+		<div class="col-xs-3  col-md-3 col-lg-3 col-xl-3 alinear mb-2">
+			<img src="./img/promocion2.png" class="thumbnail">
+		</div>
+		<div class="col-xs-3  col-md-3 col-lg-3 col-xl-3 alinear mb-2">
+			<img src="./img/promocion3.png" class="thumbnail">
+		</div>
+		<div class="col-xs-3  col-md-3 col-lg-3 col-xl-3 alinear mb-2">
+			<img src="./img/promocion4.png" class="thumbnail">
+		</div>
+	</div>
+	<br>
+	<div class="card">
+		<h5 class="card-header">DIRECCIÓN Y TELÉFONO</h5>
+	<div class="card-body">
+			<h5 class="card-title">Panna Cotta. Restaurante italiano Calle Cava Baja, 19, Madrid, España 28005 Madrid</h5>
+			<p class="card-text">E-mail: info@emmayjulia.com Teléfono: 913 66 10 23</p>
+			<button type="button" class="btn btn-lg btn-dark">Nuestras redes</button>
+	</div>
+	<div class="card-footer">
+			<p class="font-weight-bold">Comparte en las redes:</p>
+			<a href="https://es-es.facebook.com/" class="btn btn-primary">
+				<i class="fab fa-facebook"></i>
+			</a>
+			<a href="https://twitter.com/?lang=es" class="btn btn-outline-primary">
+				<i class="fab fa-twitter-square"></i>
+			</a>
+			<a href="https://web.whatsapp.com/" class="btn btn-info">
+				<i class="fab fa-whatsapp"></i>
+			</a>
+			<a href="https://www.youtube.com/" class="btn btn-danger">
+				<i class="fab fa-youtube"></i>
+			</a>
+			<a href="https://es.linkedin.com/" class="btn btn-primary">
+				<i class="fab fa-linkedin-in"></i>
+			</a>
+	</div>
+</html>

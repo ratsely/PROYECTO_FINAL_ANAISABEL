@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Restaurante italiano:Panna Cotta</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/estilocss.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
+  <script src="js/js.js"></script>
+  <script src="./js/jquery-3.3.1.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+
+      $("#home").hover(function () {
+        $(this).fadeOut(5000);
+        $(this).fadeIn(5000);
+      });
+
+      $("#boton").click(function () {
+        var usuariov = $(".usuario").val();
+        var contrasenyav = $(".contrasenya").val();
+        validarTexto(usuariov, contrasenyav);
+
+      });
+    });
+  </script>
+
+  <div class="alert alert-dark col-12" role="alert">
+    <img src="img/pannacotta.png">
+    <h1>Bienvenido a
+      <span class="resaltar">Panna cotta*</span>
+    </h1>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="Home.html">Inicio</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+        aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="Registrate.html">Registrate</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              Haz tu pedido
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="Entrantes.html">Entrantes</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="Pizzas.html">Pizzas</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="Postres.html">Postres</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item disabled" href="#">
+                <i class="fas fa-cart-plus"></i> Ver tu Cesta</a>
+            </div>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="Conocenos.html">Conócenos</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="Contacto.html">Contacto</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="/angular.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              Nuestros Productos
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Entrantes</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Pizzas</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Postres</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <br>
+
+  <body>
+    <div class="home">
+      <h1>!Este mes en
+        <span class="resaltar"> Panna cotta*</span> 50% de descuento para todos nuestros socios! !no te lo pierdas!</h1>
+    </div>
+    <br>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" heigt="50px">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="./img/1.jpg" alt="First slide">
+          <div class="carousel-caption d-none d-md-inline">
+            <h5>Cocina tradicional italiana</h5>
+            <p>Nuestra pizzería en Madrid, en la Cava Baja, en pleno Barrio de La Latina, abrió sus puertas en 1998 y, desde
+              entonces, nos enorgullece ofrecer en nuestra carta el auténtico sabor de la cocina italiana.
+            </p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="./img/2.jpg" alt="Second slide">
+          <div class="carousel-caption d-none d-md-inline">
+            <h5>Reconocimiento de crítica y público</h5>
+            <p>Cuidamos todos los detalles y uno de nuestros secretos es el horno de leña en el que elaboramos nuestras pizzas.
+              Y es que el calor de la leña le da un sabor único a nuestras pizzas.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="./img/3.jpg" alt="Third slide">
+          <div class="carousel-caption d-none d-md-inline">
+            <h5>Será uno de tus restaurantes favoritos</h5>
+            <p>Echa un vistazo a su carta sin gluten y prepárate para babear de lo lindo, pastas, pizza, por supuesto queso
+              fundido, ensaladas y carnes. Toda una delicia para celíacos y sus acompañantes (</p>
+          </div>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Anterior</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Siguiente</span>
+      </a>
+    </div>
+  </body>
+  <br>
+  <div class="card">
+    <h5 class="card-header">DIRECCIÓN Y TELÉFONO</h5>
+    <div class="card-body">
+      <h5 class="card-title">Panna Cotta. Restaurante italiano Calle Cava Baja, 19, Madrid, España 28005 Madrid</h5>
+      <p class="card-text">E-mail: info@pannacotta.com Teléfono: 913 66 10 23</p>
+      <a href="Conocenos.html">
+        <button type="button" class="btn btn-lg btn-dark">Nuestras redes</button>
+      </a>
+    </div>
+    <div class="card-footer">
+      <p class="font-weight-bold">Comparte en las redes:</p>
+      <a href="https://es-es.facebook.com/" class="btn btn-primary">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a href="https://twitter.com/?lang=es" class="btn btn-outline-primary">
+        <i class="fab fa-twitter-square"></i>
+      </a>
+      <a href="https://web.whatsapp.com/" class="btn btn-info">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a href="https://www.youtube.com/" class="btn btn-danger">
+        <i class="fab fa-youtube"></i>
+      </a>
+      <a href="https://es.linkedin.com/" class="btn btn-primary">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </div>
+    </body>

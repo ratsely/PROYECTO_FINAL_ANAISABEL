@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Restaurante italiano:Panna Cotta</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/estilocss.css">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
+  <script src="js/js.js"></script>
+  <script src="./js/jquery-3.3.1.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+
+      $("#boton").click(function () {
+        var usuariov = $(".usuario").val();
+        var contrasenyav = $(".contrasenya").val();
+        validarTexto(usuariov, contrasenyav);
+      });
+      function validarTexto(usuariov, contrasenyav) {
+        console.log(usuariov);
+        console.log(contrasenyav);
+        if (usuariov == contrasenyav) {
+          console.log("Campo válido");
+          window.location.href = "Home.html";
+        } else {
+          alert("El usuario y la contraseña son distintos");
+          $(".form-control").addClass("error");
+        }
+      }
+    });
+  </script>
+
+  <body>
+    <br>
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="card my-100 col-12" style="width:120px;">
+          <img src="img/identificate.png">
+          <h3>Acceso para socios:</h3>
+          <div class="card-body">
+            <form>
+              <div class="form-group row">
+                <div class="col-sm-10">
+                  <input type="text" class="form-control usuario" id="staticEmail" placeholder="Usuario">
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-sm-10">
+                  <input type="password" class="form-control contrasenya" id="inputPassword" placeholder="Contraseña">
+                </div>
+                <div class="col-12 my-1">
+                  <input type="button" class="btn btn-danger" id="boton" value="Aceptar">
+                </div>
+                <a href="Registrate.html">Si no eres socio registrate aquí</a>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <br>
+    </div>
+  </body>
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title"> Los Miércoles te invitamos a café</h5>
+      <p class="card-text">
+        <small class="text-muted">+ de 4.250.000 visitas</small>
+      </p>
+      <div class="col-12 my-1">
+          <input type="button" class="btn btn-outline-danger" id="boton" value="Leer artículo">
+        </div>
+    </div>
+    <img class="card-img-bottom" src="./img/postre1.jpg" width="120px" alt="Card image cap">
+</html>
